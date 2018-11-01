@@ -92,6 +92,7 @@ node.default['openstack']['image_api']['conf'].tap do |conf|
   conf['DEFAULT']['registry_host']  = registry_endpoint.host
   conf['DEFAULT']['registry_port']  = registry_endpoint.port
   conf['DEFAULT']['registry_client_protocol'] = registry_endpoint.scheme
+  conf['DEFAULT']['enabled_import_methods'] = ['glance-direct']
   # [keystone_authtoken] section
   conf['keystone_authtoken']['auth_url'] = auth_url
 end
